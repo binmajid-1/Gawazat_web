@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تسجيل بنجاح Registration Success </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 90px;
+      margin-bottom: 50px;
+      margin-top: 100px;
+      justify-content: center;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .success-icon {
+      color: #4caf50;
+      font-size: 64px;
+      margin-bottom: 20px;
+      animation-duration: 2s;
+      /* تحديد مدة الانميشن بثانيتين */
+      animation-delay: 0.5s;
+      /* تحديد تأخير الانميشن بـ 0.5 ثانية */
+      animation-fill-mode: both;
+      /* حفظ حالة الانميشن بعد الانتهاء */
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-transform: capitalize;
+      transition: 0.2s ease-in-out;
+      color: #000;
+      text-decoration: none;
+    }
+
+
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+    * {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      outline: none;
+      border: none;
+      text-transform: capitalize;
+      transition: 0.2s ease-in-out;
+      color: #000;
+      text-decoration: none;
+    }
+
+    ::selection {
+      background-color: var(--Soft-Red);
+      color: #d8d8d8;
+    }
+
+
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--Soft-Blue);
+    }
+
+    section {
+      padding: 2rem 9%;
+    }
+
+    section:nth-child(even) {
+      background: #dbeaf8;
+    }
+
+    html {
+      font-size: 62.5%;
+      scroll-behavior: smooth;
+      scroll-padding-top: 7rem;
+      overflow-x: hidden;
+    }
+
+    .heading {
+      text-align: center;
+      font-size: 2rem;
+      color: var(--Very-Dark-Blue);
+      margin-top: 10rem;
+      margin-bottom: 5rem;
+    }
+
+
+    .heading h1 {
+      padding-bottom: 2rem;
+    }
+
+
+    .heading p {
+      max-width: 60rem;
+      margin: auto;
+      color: var(--Grayish-Blue);
+      font-size: 1.7rem;
+    }
+
+
+    .all-btn {
+      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      background-color: var(--Soft-Blue);
+      border-radius: .5rem;
+      color: #fff;
+    }
+
+    .all-btn:hover {
+      background-color: transparent;
+      color: var(--Soft-Blue);
+      border: 2px solid var(--Soft-Blue);
+    }
+
+
+    :root {
+      --Soft-Blue: hsl(231, 69%, 60%);
+      --Soft-Red: hsl(0, 94%, 66%);
+      --Grayish-Blue: hsl(229, 8%, 60%);
+      --Very-Dark-Blue: hsl(229, 31%, 21%);
+      --box-shadow: .5rem .5rem 0 hsl(231, 69%, 60%);
+      --text-shadow: .4rem .4rem 0 rgba(0, 0, 0, .2);
+      --border: .2rem solid var(--green);
+    }
+
+
+    /* navbar sections starts */
+    .header {
+      padding: 3rem 9%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: 0%;
+      left: 0;
+      z-index: 10000;
+      background-color: #e3e3e3;
+      box-shadow: 0rem 0.5rem 1.5rem rgba(0, 0, 0, .1);
+    }
+
+    .header .logo img {
+      color: var(--green);
+      width: 150px;
+      height: 100px;
+      /*margin-left: -110px; اذا بخليه يرجع الى الوراء*/
+
+    }
+
+    .header .logo {
+      font-size: 2.5rem;
+      color: var(--green);
+    }
+
+
+    .header .navbar a {
+      margin-left: 2rem;
+      font-size: 1.7rem;
+      text-transform: uppercase;
+
+    }
+
+
+    .header .navbar a:hover {
+      color: var(--Soft-Red);
+
+    }
+
+
+    .header .navbar .btn {
+      padding: .6rem 3rem;
+      background-color: var(--Soft-Red);
+      color: #fff;
+      border-radius: .5rem;
+
+    }
+
+    .header .navbar .btn:hover {
+      color: var(--Soft-Red);
+      background-color: transparent;
+      border: 2px solid var(--Soft-Red);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    #menu-btn {
+      padding: 1rem 1rem;
+      background-color: #dbeaf8;
+      font-size: 3rem;
+      color: var(--Soft-Blue);
+      border-radius: .5rem;
+      cursor: pointer;
+      display: none;
+    }
+
+
+
+    /* Media Queries */
+
+
+
+
+    @media (max-width: 991px) {
+      html {
+        font-size: 55%;
+      }
+
+      .header {
+        padding: 2rem;
+      }
+
+    }
+
+    @media (max-width: 768px) {
+      #menu-btn {
+        display: initial;
+      }
+
+      .header .navbar {
+        position: absolute;
+        top: 115%;
+        right: 2rem;
+        box-shadow: var(--box-shadow);
+        width: 33rem;
+        border-radius: .5rem;
+        border: 2px solid var(--Soft-Blue);
+        background-color: #fff;
+        transform: scale(0);
+        transform-origin: top right;
+      }
+
+      .header .navbar.active {
+        transform: scale(1);
+      }
+
+      .header .navbar a {
+        margin: 2.5rem;
+        text-align: center;
+        display: block;
+        font-size: 2rem;
+      }
+    }
+
+
+    @media (max-width: 450px) {
+      html {
+        font-size: 50%;
+      }
+    }
+
+    /* navbar sections ends */
+
+
+    /* home section starts  */
+
+    .home {
+      padding-top: 15rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      /* main property for responsiveness */
+      gap: 1.5rem;
+    }
+
+
+    .home .image {
+      flex: 1 1 45rem;
+    }
+
+
+    .home .image img {
+      width: 100%;
+      margin-top: 5rem;
+    }
+
+
+    .home .content {
+      flex: 1 1 45rem;
+    }
+
+
+    .home .content h1 {
+      font-size: 4.5rem;
+      padding-block-end: 1rem 0;
+      color: var(--Very-Dark-Blue);
+    }
+
+    .home .content p {
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      max-width: 40rem;
+      color: var(--Grayish-Blue);
+      padding-bottom: 4rem;
+    }
+
+    .home .content .home-btn {
+      padding: 1.3rem 2rem;
+      background-color: #fff;
+      color: #000;
+      font-size: 1.4rem;
+      box-shadow: .5rem .5rem hsl(231, 69%, 60%);
+      border: 2px solid var(--Soft-Blue);
+      border-radius: .5rem;
+    }
+
+
+    .home .content .home-btn:hover {
+      background-color: var(--Soft-Blue);
+      box-shadow: none;
+      color: #dbeaf8;
+    }
+
+
+
+
+    /* home section ends */
+
+
+
+    /* features section starts  */
+
+    .features .row {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5rem;
+      margin: 3rem 0;
+    }
+
+    .features .row .image {
+      flex: 1 1 45rem;
+    }
+
+
+    .features .row .image img {
+      width: 100%;
+    }
+
+
+
+    .features .row .content {
+      flex: 1 1 45rem;
+    }
+
+
+    .features .row .content h1 {
+      font-size: 4rem;
+      padding: 1rem 0;
+      color: var(--Very-Dark-Blue);
+    }
+
+
+    .features .row .content p {
+      font-size: 1.7rem;
+      padding: 1rem 0;
+      color: var(--Grayish-Blue);
+      padding-bottom: 4rem;
+    }
+
+    /* features section ends */
+
+
+    /* downloads section starts  */
+
+    .download .box-container {
+      display: grid;
+      gap: 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+    }
+
+    .download .box {
+      border: 2px solid var(--Soft-Blue);
+      box-shadow: var(--box-shadow);
+      border-radius: .5rem;
+      text-align: center;
+      padding: 2.5rem;
+    }
+
+    .download .box:hover {
+      border: 2px solid var(--Soft-Blue);
+      box-shadow: none;
+    }
+
+
+    .download .box h3 {
+      font-size: 2rem;
+      padding: 1rem 0;
+      color: var(--Very-Dark-Blue);
+    }
+
+
+
+    .download .box p {
+      font-size: 1.7rem;
+      padding-bottom: 2.5rem;
+      color: var(--Grayish-Blue);
+    }
+
+    /* downloads section ends */
+
+
+
+    /* footer section starts */
+    .footer .box-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+      gap: 2rem;
+    }
+
+    .footer .box-container .box h3 {
+      font-size: 2.5rem;
+      color: var(--black);
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box a {
+      display: block;
+      font-size: 1.5rem;
+      color: var(--light-color);
+      padding: 1rem 0;
+    }
+
+    .footer .box-container .box a i {
+      padding-right: .5rem;
+      color: var(--green);
+    }
+
+    .footer .box-container .box a:hover i {
+      padding-right: 1rem;
+    }
+
+
+    .footer .credit {
+      padding: 1rem;
+      padding-top: 2rem;
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 2rem;
+      color: #000;
+      border-top: .1rem solid rgba(0, 0, 0, .1);
+    }
+
+
+    .footer .credit span {
+      color: var(--Soft-Red);
+      cursor: pointer;
+    }
+
+
+    /* footer section ends */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <i class="success-icon animate__animated animate__bounceIn">✔️</i>
+    <font size="3">
+      <h1>تم التسجيل بنجاح!</h1>
+    </font>
+    <font size="3">
+      <p>شكرًا لك على التسجيل في خدمتنا سيتم التواصل معك في أقرب وقت</p>
+    </font>
+    <font size="4"> <a href="index2.html" class="button">العودة</a></font>
+  </div>
+  <!-- footer section starts  -->
+
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="index.html"><i class="fas fa-chevron-right"></i>home</a>
+        <a href=""><i class="fas fa-chevron-right"></i>Services</a>
+        <a href="#about"><i class="fas fa-chevron-right"></i>Out Team</a>
+        <a href="Connect us.html"><i class="fas fa-chevron-right"></i>contact</a>
+      </div>
+
+
+      <div class="box">
+        <h3>our services</h3>
+        <a href="newpassport.html"><i class="fas fa-chevron-right"></i>Reserve New Passport</a>
+        <a href="Renewal of passport.html"><i class="fas fa-chevron-right"></i>Passport Renewal</a>
+        <a href="Replacement of lost.html"><i class="fas fa-chevron-right"></i>A replacement passport</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#"><i class="fas fa-phone"></i>+967779003594</a>
+        <a href="#"><i class="fas fa-phone"></i>+967778307335</a>
+        <a href="#"><i class="fas fa-envelope"></i>Gawazat@info.com</a>
+        <a href="#"><i class="fas fa-envelope"></i>dailymajid@gmail.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Aden, Yemen - 12345</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i>facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+        <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+        <a href="#"><i class="fab fa-pinterest"></i>pinterest</a>
+      </div>
+    </div>
+
+    <button type="button"
+      class="!border !border-transparent rounded-full font-bold transition ease-in-out text-center font-body no-underline hover:no-underline inline-flex items-center justify-center text-base px-6 h-11 active:scale-[0.98] text-typo !bg-secondary hover:!bg-secondary-hover active:!bg-secondary-hover focus:outline-none focus-visible:outline-none focus:ring-none focus-visible:ring focus-visible:ring-offset-2 focus-visible:ring-primary-hover"><svg
+        width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="mr-1">
+        <path
+          d="M3.8 14.25H7.61C7.45549 12.754 7.45549 11.246 7.61 9.75H3.81C3.40573 11.2228 3.40573 12.7772 3.81 14.25H3.8ZM4.37 15.75C5.37 17.79 7.17 19.36 9.35 20.08C8.67 18.98 8.15 17.48 7.83 15.75H4.37V15.75ZM20.2 14.25C20.6043 12.7772 20.6043 11.2228 20.2 9.75H16.39C16.5445 11.246 16.5445 12.754 16.39 14.25H20.19H20.2ZM19.63 15.75H16.17C15.9287 17.2732 15.4138 18.7402 14.65 20.08C15.7261 19.7252 16.7207 19.1595 17.5757 18.4161C18.4307 17.6727 19.1291 16.7663 19.63 15.75V15.75ZM9.13 14.25H14.87C15.0383 12.7547 15.0383 11.2453 14.87 9.75H9.13C8.96173 11.2453 8.96173 12.7547 9.13 14.25V14.25ZM9.36 15.75C9.92 18.59 11.05 20.5 12 20.5C12.95 20.5 14.08 18.6 14.64 15.75H9.36ZM4.37 8.25H7.83C8.14 6.51 8.67 5.01 9.35 3.92C8.27394 4.27482 7.27935 4.84046 6.42431 5.5839C5.56927 6.32734 4.87091 7.23368 4.37 8.25V8.25ZM19.63 8.25C19.1291 7.23368 18.4307 6.32734 17.5757 5.5839C16.7207 4.84046 15.7261 4.27482 14.65 3.92C15.33 5.02 15.85 6.52 16.17 8.25H19.63ZM21.27 8.25H21.31V8.35C22.28 10.8134 22.2336 13.5609 21.1808 15.9901C20.1281 18.4193 18.155 20.332 15.6943 21.3086C13.2335 22.2852 10.4858 22.2462 8.05381 21.2C5.62178 20.1538 3.70386 18.1859 2.7206 15.7278C1.73735 13.2696 1.769 10.5219 2.80863 8.08704C3.84825 5.6522 5.81099 3.72899 8.26648 2.73912C10.722 1.74925 13.4698 1.7735 15.9074 2.80657C18.345 3.83963 20.2735 5.79719 21.27 8.25V8.25ZM9.36 8.25H14.64C14.08 5.41 12.95 3.5 12 3.5C11.05 3.5 9.92 5.4 9.36 8.25Z"
+          fill="currentColor"></path>
+      </svg> English</button>
+    <div class="credit">&copy; 2023 Web Company, Inc.
+      <a href="index.html" target="_blank"><span>Gawazat</span> | all rights reserved</a>
+    </div>
+  </section>
+
+
+  <!-- footer section ends -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-visible/1.2.0/jquery.visible.min.js"></script>
+  <script>
+    // تفعيل التأثير الانميشن عند ظهور علامة الصح
+    $(document).ready(function () {
+      $(".success-icon").visible(function () {
+        $(this).addClass("animate__animated animate__bounceIn");
+      });
+    });
+  </script>
+</body>
+
+</html>

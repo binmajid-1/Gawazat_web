@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gawazat</title>
+  <link rel="stylesheet" href="./css/index2.css">
+  <link rel="icon" type="صورة" href="صورة_شعار_الجواز-removebg-preview (4).png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="index.js">
+  <style>
+    #toggles {
+
+
+      .body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+
+      }
+
+      .theme-light {
+        --color-primary: #0060df;
+        --color-secondary: #fbfbfe;
+        --color-accent: #fd6f53;
+        --font-color: #000000;
+      }
+
+      .theme-dark {
+        --color-primary: #17ed90;
+        --color-secondary: #243133;
+        --color-accent: #12cdea;
+        --font-color: #ffffff;
+      }
+
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        background: var(--color-secondary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container h1 {
+        color: var(--font-color);
+      }
+
+      .container button {
+        color: var(--font-color);
+        background: var(--color-primary);
+        padding: 10px 20px;
+        border: 0;
+        border-radius: 5px;
+      }
+
+    }
+  </style>
+</head>
+
+<body >
+  <!-- navbar sections starts  -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="صورة_شعار_الجواز-removebg-preview (4).png" alt="logo-bookmark"></a>
+    </div>
+    <nav class="navbar">
+      <ul>
+        <button class="btn" id="toggles" onclick="changeTheme()">
+          <font size="4">
+            <li> Theme</li>
+          </font>
+        </button>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Services</a></li>
+        <li><a href="passport onlin.html"> about</a></li>
+        <li><a href="Connect us.html"> Content us</a></li>
+        <li><a href="signup.php" class="btn">signup</a></li>
+        <li><a href="join.php" class="btn">login</a></li>
+         
+      </ul>
+    </nav>
+
+    
+    
+    <style>
+    /*profile-circle*/
+      .profile-circle {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #f2f2f2;
+        overflow: hidden;
+      }
+      
+      .profile-circle img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  
+  <body>
+
+    
+
+
+
+    <div class="fas fa-bars" id="menu-btn"></div>
+
+    <script>
+      if (localStorage.getItem("themeMode") === "dark") {
+        addCssDark();
+      } else {
+        localStorage.setItem("themeMode", "light");
+      }
+      function changeTheme() {
+        if (localStorage.getItem("themeMode") === "light") {
+          addCssDark();
+          localStorage.setItem("themeMode", "dark");
+        } else {
+          document.getElementById("masdark").remove();
+          document.getElementById("toggles").classList.remove("active");
+          localStorage.setItem("themeMode", "light");
+          document.getElementById("toggles").title = "Change to dark mode";
+        }
+      }
+      function addCssDark() {
+        document.head.innerHTML =
+          document.head.innerHTML +
+          '<style id="masdark">html, html * {color: #eeeeee !important; background-color: #292929 !important;} a {color: #8db2e5 !important;} a:visited {color: rgb(211, 138, 138) !important;} #toggles.active {background: #fff !important;}</style>';
+        document.getElementById("toggles").classList.add("active");
+        document.getElementById("toggles").title = "Change to light mode";
+      }
+    </script>
+
+  </header>
+  <!-- navbar sections starts  -->
+
+
+  <!-- home section stars  -->
+
+  <section class="home" id="home">
+    <div class="content">
+      <h1>Reserve Your Passport</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel sit non reiciendis harum ratione expedita commodi
+        quidem tempore quisquam, aspernatur neque dolore molestiae saepe repellat totam eius laboriosam facere
+        voluptates!</p>
+
+      <a href="signup.php" class="home-btn">get start</a>
+    </div>
+
+
+    <div class="image">
+      <img src="images/illustration-hero.svg" alt="illustration-hero">
+    </div>
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- features sectin starts  -->
+
+  <section class="features" id="features">
+    <div class="heading">
+      <h1>Services</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facilis, quibusdam recusandae quidem, quisquam unde
+        animi numquam debitis vel vero molestias illo similique sit pariatur assumenda laboriosam culpa aliquam
+        voluptatibus aperiam!</p>
+    </div>
+
+
+    <div class="row">
+      <!-- 1 Tab  -->
+      <div class="image">
+        <img src="images/illustration-features-tab-1.svg" alt="illustration-features-tab-1">
+      </div>
+
+
+      <div class="content">
+        <h1>Reserve New Passport</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi sint odit tempora, maiores quos qui quisquam
+          accusamus ad officiis sapiente.</p>
+        <a href="signup.php" class="all-btn">more info</a>
+      </div>
+
+      <!-- 1 Tab  -->
+
+      <!-- 2 Tab  -->
+      <div class="content">
+        <h1>Passport Renewal</h1>
+        <p>Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of
+          your bookmarks.</p>
+        <a href="signup.php" class="all-btn">more info</a>
+      </div>
+
+      <div class="image">
+        <img src="images/illustration-features-tab-2.svg" alt="illustration-features-tab-2">
+      </div>
+
+      <!-- 2 Tab  -->
+
+      <div class="image">
+        <img src="images/illustration-features-tab-3.svg" alt="illustration-features-tab-3">
+      </div>
+
+      <div class="content">
+        <h1>A replacement passport </h1>
+        <p>Easily share your bookmarks and collections with others. Create a shareable link that you can send at the
+          click of a button.</p>
+        <a href="signup.php" class="all-btn">more info</a>
+      </div>
+
+
+      <!-- 3 Tab  -->
+
+    </div>
+  </section>
+
+
+  <!-- features sectin ends -->
+
+
+  <!-- downloads section starts  -->
+
+  <!-- <section class="download" id="download">
+        <div class="heading">
+            <h1>Download Extension</h1>
+            <p>We've got more browsers in the pipeline. Please do le us know if you got've got a favorite you'd like us to prioritize</p>
+        </div>
+
+        <div class="box-container">
+            <div class="box">
+                <img src="images/logo-chrome.svg" alt="logo-chrome">
+
+                <h3>Add to Chrome</h3>
+                <p>Minimum Version 63</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+
+            <div class="box">
+                <img src="images/logo-firefox.svg" alt="logo-firefox">
+
+                <h3>Add to Firefox</h3>
+                <p>Minimum Version 55</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+
+            <div class="box">
+                <img src="images/logo-opera.svg" alt="logo-opera">
+
+                <h3>Add to Opera</h3>
+                <p>Minimum Version 46</p>
+                <a href="#" class="all-btn">install</a>
+            </div>
+        </div>
+    </section> -->
+
+
+
+
+
+  <style>
+    * {
+      font-family: Nunito, sans-serif;
+    }
+
+    .text-blk {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 0px;
+      margin-left: 0px;
+      line-height: 25px;
+    }
+
+    .responsive-cell-block {
+      min-height: 75px;
+    }
+
+    .responsive-container-block {
+      min-height: 75px;
+      height: fit-content;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0px;
+      margin-right: auto;
+      margin-bottom: 0px;
+      margin-left: auto;
+      justify-content: space-evenly;
+    }
+
+    .outer-container {
+      padding-top: 10px;
+      padding-right: 50px;
+      padding-bottom: 10px;
+      padding-left: 50px;
+      background-color: rgb(244, 252, 255);
+    }
+
+    .inner-container {
+      max-width: 1320px;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 50px;
+      margin-right: auto;
+      margin-bottom: 50px;
+      margin-left: auto;
+    }
+
+    .section-head-text {
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 5px;
+      margin-left: 0px;
+      font-size: 35px;
+      font-weight: 700;
+      line-height: 48px;
+      color: rgb(0, 135, 177);
+      margin: 0 0 10px 0;
+    }
+
+    .section-subhead-text {
+      font-size: 25px;
+      color: rgb(153, 153, 153);
+      line-height: 35px;
+      max-width: 500px;
+      text-align: center;
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 60px;
+      margin-left: 0px;
+    }
+
+    .img-wrapper {
+      width: 100%;
+    }
+
+    .team-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 500px;
+    }
+
+    .social-media-links {
+      width: 125px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .name {
+      font-size: 25px;
+      font-weight: 700;
+      color: rgb(102, 102, 102);
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 5px;
+      margin-left: 0px;
+    }
+
+    .position {
+      font-size: 25px;
+      font-weight: 700;
+      color: rgb(0, 135, 177);
+      margin-top: 0px;
+      margin-right: 0px;
+      margin-bottom: 50px;
+      margin-left: 0px;
+    }
+
+    .team-img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .team-card-container {
+      width: 280px;
+      margin: 0 0 40px 0;
+    }
+
+    @media (max-width: 500px) {
+      .outer-container {
+        padding: 10px 20px 10px 20px;
+      }
+
+      .section-head-text {
+        text-align: center;
+      }
+    }
+  </style>
+
+  <div id="about" class="responsive-container-block outer-container">
+    <div class="responsive-container-block inner-container">
+      <p class="text-blk section-head-text">Meet Our Expert Instructors</p>
+      <p class="text-blk section-subhead-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <div class="responsive-container-block">
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="صورة همام.png" />
+            </div>
+            <p class="text-blk name">HammamCO</p>
+            <p class="text-blk position">Frontend</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مجهول رجل.png" />
+            </div>
+            <p class="text-blk name">Faruoq</p>
+            <p class="text-blk position">Database</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="صورة عبدالرحمن.png" />
+            </div>
+            <p class="text-blk name">ِAbdulrahman</p>
+            <p class="text-blk position">Photoshop</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مجهول بنت.png" />
+            </div>
+            <p class="text-blk name">ِFawzia</p>
+            <p class="text-blk position">ul & ux</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مصطفى.png" />
+            </div>
+            <p class="text-blk name">Mustafa</p>
+            <p class="text-blk position">Backend</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مجهول بنت.png" />
+            </div>
+            <p class="text-blk name">Fatema</p>
+            <p class="text-blk position">Photoshop</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href="http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مجهول رجل.png" />
+            </div>
+            <p class="text-blk name">Mansour</p>
+            <p class="text-blk position">Photoshop</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href=  "http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="responsive-cell-block wk-desk-3 wk-ipadp-3 wk-tab-6 wk-mobile-12 team-card-container">
+          <div class="team-card">
+            <div class="img-wrapper">
+              <img class="team-img" src="مجهول رجل.png" />
+            </div>
+            <p class="text-blk name">Mansour</p>
+            <p class="text-blk position">Photoshop</p>
+            <div class="social-media-links">
+              <a href="http://www.twitter.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-twitter.svg" />
+              </a>
+              <a href="http://www.facebook.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-fb.svg" />
+              </a>
+              <a href=  "http://www.instagram.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-insta.svg" />
+              </a>
+              <a href="http://www.gmail.com/" target="_blank">
+                <img src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/gray-mail.svg" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--imaeg team end-->
+
+
+
+  <!-- downloads section ends -->
+
+
+
+  <!-- footer section starts  -->
+
+  <section class="footer" id="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="index.html"><i class="fas fa-chevron-right"></i>home</a>
+        <a href="#features"><i class="fas fa-chevron-right"></i>Services</a>
+        <a href="#about"><i class="fas fa-chevron-right"></i>Out Team</a>
+        <a href="Connect us.html"><i class="fas fa-chevron-right"></i>contact</a>
+      </div>
+
+
+      <div class="box">
+        <h3>our services</h3>
+        <a href="new.html"><i class="fas fa-chevron-right"></i>Reserve New Passport</a>
+        <a href="Renewal .html"><i class="fas fa-chevron-right"></i>Passport Renewal</a>
+        <a href="Replacement.html"><i class="fas fa-chevron-right"></i>A replacement passport</a>
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#"><i class="fas fa-phone"></i>+967779003594</a>
+        <a href="#"><i class="fas fa-phone"></i>+967778307335</a>
+        <a href="#"><i class="fas fa-envelope"></i>Gawazat@info.com</a>
+        <a href="#"><i class="fas fa-envelope"></i>dailymajid@gmail.com</a>
+        <a href="#"><i class="fas fa-map-marker-alt"></i>Aden, Yemen - 12345</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#"><i class="fab fa-facebook-f"></i>facebook</a>
+        <a href="#"><i class="fab fa-twitter"></i>facebook</a>
+        <a href="#"><i class="fab fa-instagram"></i>instagram</a>
+        <a href="#"><i class="fab fa-linkedin"></i>linkedin</a>
+        <a href="#"><i class="fab fa-pinterest"></i>pinterest</a>
+      </div>
+    </div>
+    
+    <nav class="navbar">
+      <ul> 
+        <li><a href="../index.html" class="btn">العربية</a></li>
+        <li><a href="index.html" class="btn"> الانجليزية  </a></li>
+     </ul> 
+    </nav>
+
+ 
+     
+    <div class="credit">&copy; 2023 Web Company, Inc.
+      <a href="index.html" target="_blank"><span>Gawazat</span> | all rights reserved</a>
+    </div>
+  </section>
+
+
+  <!-- footer section ends -->
+
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>
